@@ -11,8 +11,8 @@
       color: #0d2638;
       font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
       background:
-        linear-gradient(135deg, rgba(245, 252, 255, 0.25), rgba(230, 247, 255, 0.08)),
-        url("../assets/catgirl-bg.jpg") center 28% / cover fixed no-repeat;
+        linear-gradient(90deg, rgba(242, 251, 255, 0.02), rgba(7, 22, 40, 0.18)),
+        url("../assets/catgirl-bg.jpg") left center / cover fixed no-repeat;
       overflow: hidden;
     }
     .page {
@@ -29,7 +29,6 @@
       justify-content: space-between;
       gap: 14px;
       padding: 0 6px;
-      text-shadow: 0 1px 12px rgba(255, 255, 255, 0.9);
     }
     .brand {
       display: flex;
@@ -39,30 +38,39 @@
       text-decoration: none;
       font-weight: 800;
       letter-spacing: 0.02em;
+      text-shadow: 0 1px 14px rgba(255, 255, 255, 1);
+      padding: 6px 12px 6px 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.58);
+      backdrop-filter: blur(10px);
     }
     .brand img {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.9);
       object-fit: cover;
     }
     .meta {
-      color: rgba(13, 38, 56, 0.72);
+      color: rgba(7, 22, 40, 0.7);
       font: 12px/1.4 "Cascadia Code", Consolas, monospace;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       white-space: nowrap;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
     }
     .frame {
-      width: min(980px, 100%);
+      width: clamp(420px, 42vw, 570px);
       flex: 1 1 auto;
       min-height: 0;
-      margin: 0 auto;
+      align-self: flex-end;
       padding: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.75);
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 22px 80px rgba(17, 42, 64, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.88);
+      border-radius: 22px;
+      background: rgba(247, 252, 255, 0.42);
+      box-shadow: 0 24px 90px rgba(4, 20, 38, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.9);
       overflow: hidden;
     }
     iframe {
@@ -70,13 +78,15 @@
       width: 100%;
       height: 100%;
       border: 0;
-      border-radius: 18px;
+      border-radius: 16px;
       background: #fefefe;
     }
-    @media (max-width: 640px) {
+    @media (max-width: 860px) {
+      body { background-position: 27% center; }
       .page { padding: 8px; gap: 6px; }
+      .bar { justify-content: flex-start; }
       .meta { display: none; }
-      .frame { border-radius: 16px; padding: 4px; }
+      .frame { width: 100%; border-radius: 16px; padding: 4px; }
       iframe { border-radius: 12px; }
     }
   </style>

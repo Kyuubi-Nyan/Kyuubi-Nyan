@@ -19,6 +19,8 @@
 
 - 页面：[Kyuubi-Nyan Guestbook](https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/)
 - 留言服务：MoeDog Chat Room，进入页面后填写昵称与留言即可直接发送。
-- 背景图：用户提供的 `images.jpg`。版权归原作者所有，图片保留原始水印，仅用于个人主页留言板背景。
+- 背景图：原画作者 **cloneko (zelmeledf2)**，高清原图来自 [Danbooru #11583201](https://danbooru.donmai.us/posts/11583201)，用户在需求中提供的低清参考图用于匹配同一作品。
+- 图片版权归原作者所有，保留原始水印，仅用于个人主页留言板背景。
 
 第三方服务可能出现临时限流或加载延迟；失效时，页面仍保留可读的标题与替代文本。
+
