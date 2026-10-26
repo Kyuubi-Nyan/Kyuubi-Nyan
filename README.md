@@ -1,7 +1,8 @@
 <div align="center">
-  <a href="https://github.com/journey-ad/Moe-Counter">
+  <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/">
     <img src="https://count.getloli.com/@Kyuubi-Nyan?name=Kyuubi-Nyan&theme=cat-girls-yay&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" width="360" alt="像素猫娘访客计数器" />
   </a>
+  <p>猫娘手里显示的是访问计数 · 点一下进入留言板</p>
 </div>
 
 <p align="center">
@@ -31,16 +32,36 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 ## Tech Stack
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Java-17233A?style=for-the-badge&logo=openjdk&logoColor=BFEAFF" alt="Java" />
-  <img src="https://img.shields.io/badge/Python-17233A?style=for-the-badge&logo=python&logoColor=BFEAFF" alt="Python" />
-  <img src="https://img.shields.io/badge/NGINX-17233A?style=for-the-badge&logo=nginx&logoColor=BFEAFF" alt="NGINX" />
-  <img src="https://img.shields.io/badge/Spring_Boot-17233A?style=for-the-badge&logo=springboot&logoColor=8EDBFF" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/MySQL-17233A?style=for-the-badge&logo=mysql&logoColor=BFEAFF" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Redis-17233A?style=for-the-badge&logo=redis&logoColor=FF9ACB" alt="Redis" />
-  <img src="https://img.shields.io/badge/Docker-17233A?style=for-the-badge&logo=docker&logoColor=8EDBFF" alt="Docker" />
-  <img src="https://img.shields.io/badge/Linux-17233A?style=for-the-badge&logo=linux&logoColor=BFEAFF" alt="Linux" />
+  <img src="https://img.shields.io/badge/PLATFORM-WINDOWS-0078D4?style=for-the-badge&labelColor=3D444D&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/IDE-VS_CODE-007ACC?style=for-the-badge&labelColor=3D444D&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/JAVA-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/NODE.JS-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/SQL-MYSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL / MySQL" />
+  <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/NGINX-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="NGINX" />
+</p>
+
+## Guestbook
+
+<p align="center">
+  💬 <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/">点击下方图片进入留言板</a> 💬
+</p>
+
+<p align="center">
+  <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/">
+    <img src="https://img.shields.io/badge/%F0%9F%92%AC_LEAVE_A_MESSAGE-17233A?style=for-the-badge&logo=github&logoColor=9FE3FF" alt="打开 Kyuubi-Nyan 的留言板" />
+  </a>
+</p>
 ## GitHub 小档案
 
 <table align="center">
@@ -88,8 +109,8 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kyuubi-Nyan/Kyuubi-Nyan/output/snake-dark.svg" />
-    <img width="100%" src="https://raw.githubusercontent.com/Kyuubi-Nyan/Kyuubi-Nyan/output/snake.svg" alt="由贡献格生成的蓝白猫咪蛇动画" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kyuubi-Nyan/Kyuubi-Nyan/output/snake-dark.svg?v=20261026-cachefix" />
+    <img width="100%" src="https://raw.githubusercontent.com/Kyuubi-Nyan/Kyuubi-Nyan/output/snake.svg?v=20261026-cachefix" alt="由贡献格生成的蓝白猫咪蛇动画" />
   </picture>
 </div>
 
@@ -100,6 +121,9 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 <p align="center">
   <sub>视觉与动态组件均为网上开源资源，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
 </p>
+
+
+
 
 
 

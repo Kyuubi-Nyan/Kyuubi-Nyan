@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Kyuubi-Nyan 的留言板</title>
+  <style>
+    :root {
+      --ink: #eaf6ff;
+      --muted: #a9c5d9;
+      --cyan: #86ddff;
+      --pink: #ff9acb;
+      --panel: rgba(7, 17, 31, 0.78);
+      --line: rgba(160, 224, 255, 0.3);
+    }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+      background:
+        linear-gradient(120deg, rgba(3, 10, 25, 0.76), rgba(8, 24, 46, 0.46)),
+        url("../assets/catgirl-bg.jpg") center 28% / cover fixed no-repeat;
+      background-color: #07111f;
+    }
+    a { color: var(--cyan); }
+    .shell {
+      width: min(900px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 42px 0 56px;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      object-fit: cover;
+      background: #16263a;
+    }
+    .home-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      background: rgba(7, 17, 31, 0.44);
+      backdrop-filter: blur(12px);
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+    .hero {
+      padding: 34px 34px 26px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .hero::after {
+      content: "NYAN / GUESTBOOK";
+      position: absolute;
+      right: 34px;
+      top: 32px;
+      color: rgba(134, 221, 255, 0.5);
+      font: 11px/1.4 "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.12em;
+    }
+    .eyebrow {
+      color: var(--cyan);
+      font: 12px/1.5 "Cascadia Code", Consolas, monospace;
+      letter-spacing: 0.12em;
+      margin: 0 0 8px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 6vw, 48px);
+      letter-spacing: -0.035em;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.7;
+    }
+    .composer {
+      padding: 24px 34px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    textarea {
+      width: 100%;
+      min-height: 104px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      color: var(--ink);
+      background: rgba(4, 12, 24, 0.56);
+      font: inherit;
+      line-height: 1.6;
+      outline: none;
+    }
+    textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(134, 221, 255, 0.14);
+    }
+    .composer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .hint { color: var(--muted); font-size: 13px; margin: 0; }
+    button, .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 18px;
+      color: #06111f;
+      background: linear-gradient(110deg, var(--cyan), #d7f4ff 55%, var(--pink));
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      font: inherit;
+      transition: transform 150ms ease, filter 150ms ease;
+    }
+    button:hover, .button-link:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .thread { padding: 24px 34px 34px; }
+    .thread-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .thread-head h2 { margin: 0; font-size: 19px; }
+    .thread-head span { color: var(--muted); font: 12px/1.4 "Cascadia Code", Consolas, monospace; }
+    .messages { display: grid; gap: 12px; }
+    .message, .empty, .error {
+      border: 1px solid rgba(160, 224, 255, 0.16);
+      border-radius: 16px;
+      background: rgba(5, 14, 28, 0.52);
+      padding: 15px 17px;
+    }
+    .message-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 9px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .message-head img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #16263a;
+    }
+    .message-author { color: var(--cyan); font-weight: 700; }
+    .message-body { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.72; }
+    .message-link { color: var(--muted); text-decoration: none; margin-left: auto; font-size: 12px; }
+    .empty, .error { color: var(--muted); text-align: center; padding: 28px 16px; }
+    footer { color: rgba(234, 246, 255, 0.65); text-align: center; font-size: 12px; padding-top: 20px; }
+    @media (max-width: 620px) {
+      .shell { padding-top: 20px; }
+      .hero, .composer, .thread { padding-left: 20px; padding-right: 20px; }
+      .hero::after { display: none; }
+      .topbar { align-items: flex-start; }
+      .home-link { padding: 7px 11px; }
+      body { background-position: center top; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar">
+      <a class="brand" href="https://github.com/Kyuubi-Nyan">
+        <img src="https://github.com/Kyuubi-Nyan.png?size=96" alt="Kyuubi-Nyan 的头像" />
+        <span>Kyuubi-Nyan</span>
+      </a>
+      <a class="home-link" href="https://github.com/Kyuubi-Nyan">← GitHub Profile</a>
+    </nav>
+
+    <section class="panel">
+      <header class="hero">
+        <p class="eyebrow">OPEN CHANNEL / LEAVE A TRACE</p>
+        <h1>留一句话给我吧，喵～</h1>
+        <p class="subtitle">Your message becomes a public GitHub Issue in this repository.<br />留言通过 GitHub Issue 保存与展示。</p>
+      </header>
+
+      <section class="composer">
+        <label for="message" class="eyebrow">YOUR MESSAGE</label>
+        <textarea id="message" maxlength="1800" placeholder="写点什么吧…… 也可以留下你的 GitHub ID。"></textarea>
+        <div class="composer-row">
+          <p class="hint">点击发送后会打开 GitHub 新建 Issue 页面，请确认后提交。</p>
+          <button id="send" type="button">发送留言 ↗</button>
+        </div>
+      </section>
+
+      <section class="thread" aria-live="polite">
+        <div class="thread-head">
+          <h2>最近留言</h2>
+          <span id="status">LOADING…</span>
+        </div>
+        <div class="messages" id="messages">
+          <div class="empty">正在读取留言……</div>
+        </div>
+      </section>
+    </section>
+
+    <footer>Kyuubi-Nyan's guestbook · hosted by GitHub Pages</footer>
+  </main>
+
+  <script>
+    const owner = "Kyuubi-Nyan";
+    const repo = "Kyuubi-Nyan";
+    const label = "guestbook";
+    const issueBase = `https://github.com/${owner}/${repo}/issues/new?labels=${encodeURIComponent(label)}&title=${encodeURIComponent("Guestbook message")}`;
+    const messages = document.getElementById("messages");
+    const status = document.getElementById("status");
+    const textarea = document.getElementById("message");
+
+    document.getElementById("send").addEventListener("click", () => {
+      const body = textarea.value.trim();
+      if (!body) {
+        textarea.focus();
+        textarea.placeholder = "先写一点内容再发送喵～";
+        return;
+      }
+      const url = `${issueBase}&body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+
+    function element(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    }
+
+    async function loadMessages() {
+      try {
+        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues?state=open&labels=${encodeURIComponent(label)}&per_page=30&sort=created&direction=desc`, {
+          headers: { Accept: "application/vnd.github+json" }
+        });
+        if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+        const items = (await res.json()).filter(item => !item.pull_request);
+        messages.replaceChildren();
+        status.textContent = `${items.length} MESSAGE${items.length === 1 ? "" : "S"}`;
+        if (!items.length) {
+          messages.appendChild(element("div", "empty", "还没有留言，来写下第一条吧。"));
+          return;
+        }
+        for (const item of items) {
+          const card = element("article", "message");
+          const head = element("div", "message-head");
+          const avatar = document.createElement("img");
+          avatar.src = item.user.avatar_url;
+          avatar.alt = "";
+          const author = element("span", "message-author", `@${item.user.login}`);
+          const time = element("time", "", new Date(item.created_at).toLocaleString("zh-CN"));
+          const link = element("a", "message-link", `#${item.number} ↗`);
+          link.href = item.html_url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          head.append(avatar, author, time, link);
+          const body = element("p", "message-body", item.body || "(empty message)");
+          card.append(head, body);
+          messages.appendChild(card);
+        }
+      } catch (error) {
+        status.textContent = "OFFLINE";
+        messages.replaceChildren(element("div", "error", "留言加载失败，请稍后刷新，或直接前往 GitHub Issues 留言。"));
+      }
+    }
+
+    loadMessages();
+  </script>
+</body>
+</html>
