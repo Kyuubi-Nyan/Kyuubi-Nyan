@@ -98,7 +98,8 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 </p>
 
 <p align="center">
-  <sub>视觉素材来自 Pixabay，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
+  <sub>视觉与动态组件均为网上开源资源，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
 </p>
+
 
 
