@@ -54,12 +54,12 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 ## Guestbook
 
 <p align="center">
-  💬 <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/">点击下方图片进入留言板</a> 💬
+  ⬇️ <strong>点击下方图片，直接输入昵称和留言</strong> ⬇️
 </p>
 
 <p align="center">
   <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/">
-    <img src="https://img.shields.io/badge/%F0%9F%92%AC_LEAVE_A_MESSAGE-17233A?style=for-the-badge&logo=github&logoColor=9FE3FF" alt="打开 Kyuubi-Nyan 的留言板" />
+    <img src="https://chat.getloli.com/room/@Kyuubi-Nyan.github/svg?width=600&height=160&limit=20&theme=light&title=Kyuubi-Nyan%40github:%20~&fontSize=13" alt="Kyuubi-Nyan 的实时留言板预览" />
   </a>
 </p>
 ## GitHub 小档案
@@ -121,6 +121,7 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 <p align="center">
   <sub>视觉与动态组件均为网上开源资源，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
 </p>
+
 
 
 

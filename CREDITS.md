@@ -18,7 +18,7 @@
 ## 留言板
 
 - 页面：[Kyuubi-Nyan Guestbook](https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/)
-- 留言保存方式：公开 GitHub Issues，标签为 `guestbook`。
+- 留言服务：MoeDog Chat Room，进入页面后填写昵称与留言即可直接发送。
 - 背景图：用户提供的 `images.jpg`。版权归原作者所有，图片保留原始水印，仅用于个人主页留言板背景。
 
 第三方服务可能出现临时限流或加载延迟；失效时，页面仍保留可读的标题与替代文本。
