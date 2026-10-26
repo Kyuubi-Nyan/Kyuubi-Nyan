@@ -2,7 +2,7 @@
   <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/guestbook/">
     <img src="https://count.getloli.com/@Kyuubi-Nyan?name=Kyuubi-Nyan&theme=cat-girls-yay&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" width="360" alt="像素猫娘访客计数器" />
   </a>
-  <p>猫娘手里显示的是访问计数 · 点一下进入留言板</p>
+  <p>访问计数</p>
 </div>
 
 <p align="center">
@@ -121,6 +121,7 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 <p align="center">
   <sub>视觉与动态组件均为网上开源资源，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
 </p>
+
 
 
 
