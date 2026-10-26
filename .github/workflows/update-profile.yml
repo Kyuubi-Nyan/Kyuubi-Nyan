@@ -16,15 +16,23 @@ jobs:
   generate-snake:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate snake SVGs
-        uses: Platane/snk/svg-only@v3
+      - name: Generate light contribution snake
+        uses: dahan8473/snake-and-commits@v1
         with:
-          github_user_name: Kyuubi-Nyan
-          outputs: |
-            dist/snake.svg?color_snake=%233C9BC4&color_dots=%23DBEEFA,%23BFE4F7,%238FD3EE,%2351B3D9,%23226F9B
-            dist/snake-dark.svg?color_snake=%238EDBFF&color_dots=%2313263D,%231A3B55,%232A6A86,%234F9FC1,%23BFEAFF
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_user: Kyuubi-Nyan
+          output: dist/snake.svg
+          theme: blue
+          frame: true
+          counter: true
+
+      - name: Generate dark contribution snake
+        uses: dahan8473/snake-and-commits@v1
+        with:
+          github_user: Kyuubi-Nyan
+          output: dist/snake-dark.svg
+          theme: blue
+          frame: true
+          counter: true
 
       - name: Publish SVGs to output branch
         uses: crazy-max/ghaction-github-pages@v4

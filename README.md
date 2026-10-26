@@ -1,12 +1,12 @@
 <div align="center">
-  <a href="https://github.com/Kyuubi-Nyan">
-    <img src="./assets/banner.png" alt="Kyuubi-Nyan 蓝白猫娘二次元主页横幅" width="100%" />
+  <a href="https://github.com/journey-ad/Moe-Counter">
+    <img src="https://count.getloli.com/@Kyuubi-Nyan?name=Kyuubi-Nyan&theme=cat-girls-yay&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto" width="360" alt="像素猫娘访客计数器" />
   </a>
 </div>
 
 <p align="center">
   <a href="https://github.com/Kyuubi-Nyan">
-    <img src="https://readme-typing-svg.demolab.com?font=ZCOOL+KuaiLe&weight=500&size=22&pause=1200&color=9FE3FF&center=true&vCenter=true&width=760&lines=Kyuubi-Nyan;%E8%B7%AF%E8%99%BD%E8%BF%9C%EF%BC%8C%E8%A1%8C%E5%88%99%E5%BF%85%E8%87%B3%E3%80%82;Rust+%C2%B7+Automation+%C2%B7+Anime" alt="Kyuubi-Nyan 的动态签名" />
+    <img src="https://readme-typing-svg.demolab.com?font=ZCOOL+KuaiLe&weight=500&size=22&pause=1200&color=9FE3FF&center=true&vCenter=true&width=760&lines=Kyuubi-Nyan;Hi%2C+I%27m+18;Java+%C2%B7+Python+%C2%B7+NGINX;Rust+%C2%B7+Backend+%C2%B7+Anime" alt="Kyuubi-Nyan 的动态签名" />
   </a>
 </p>
 
@@ -21,12 +21,25 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&height=78&section=header&color=gradient&customColorList=4,11,24&reversal=false" alt="蓝白波浪装饰" width="100%" />
 </p>
 
-## 你好，我是 Kyuubi-Nyan
+## Hi, I'm 18.
 
-> 路虽远，行则必至。
+> The road may be long, but I'll get there.
 
-喜欢折腾 **Rust、自动化工具**，也喜欢一切有点二次元的东西。  
-偶尔写点实用的小工具，偶尔把界面做得比功能还认真一点。喵。
+I build things with **Rust and automation**, and I have a soft spot for anything anime-related.  
+Sometimes I write practical tools; sometimes I spend more time on the UI than the feature itself. Nyan.
+
+## Tech Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17233A?style=for-the-badge&logo=openjdk&logoColor=BFEAFF" alt="Java" />
+  <img src="https://img.shields.io/badge/Python-17233A?style=for-the-badge&logo=python&logoColor=BFEAFF" alt="Python" />
+  <img src="https://img.shields.io/badge/NGINX-17233A?style=for-the-badge&logo=nginx&logoColor=BFEAFF" alt="NGINX" />
+  <img src="https://img.shields.io/badge/Spring_Boot-17233A?style=for-the-badge&logo=springboot&logoColor=8EDBFF" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/MySQL-17233A?style=for-the-badge&logo=mysql&logoColor=BFEAFF" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Redis-17233A?style=for-the-badge&logo=redis&logoColor=FF9ACB" alt="Redis" />
+  <img src="https://img.shields.io/badge/Docker-17233A?style=for-the-badge&logo=docker&logoColor=8EDBFF" alt="Docker" />
+  <img src="https://img.shields.io/badge/Linux-17233A?style=for-the-badge&logo=linux&logoColor=BFEAFF" alt="Linux" />
+</p>
 
 ## GitHub 小档案
 
@@ -87,4 +100,5 @@
 <p align="center">
   <sub>视觉素材来自 Pixabay，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
 </p>
+
 
