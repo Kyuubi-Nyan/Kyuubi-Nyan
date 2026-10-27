@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>cloneko illustration gallery</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(8, 22, 39, 0.78);
+      --line: rgba(155, 224, 255, 0.24);
+      --cyan: #9fe3ff;
+      --pink: #ff9acb;
+      --text: #eaf6ff;
+      --muted: #a8bfd1;
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      min-height: 100%;
+      margin: 0;
+      color: var(--text);
+      font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+      background:
+        linear-gradient(120deg, rgba(5, 13, 26, 0.92), rgba(5, 17, 31, 0.72)),
+        url("../assets/catgirl-bg.jpg") center 28% / cover fixed no-repeat;
+    }
+    a { color: var(--cyan); }
+    .shell { width: min(1440px, calc(100% - 28px)); margin: 0 auto; padding: 26px 0 54px; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .brand img { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); }
+    .nav { display: flex; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(7, 17, 31, 0.48);
+    }
+    .hero {
+      padding: clamp(24px, 4vw, 46px);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--panel);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      margin-bottom: 22px;
+    }
+    .eyebrow { color: var(--cyan); font: 12px/1.5 "Cascadia Code", Consolas, monospace; letter-spacing: 0.12em; margin: 0 0 9px; }
+    h1 { margin: 0 0 9px; font-size: clamp(34px, 7vw, 68px); letter-spacing: -0.045em; }
+    .subtitle { max-width: 720px; margin: 0; color: var(--muted); line-height: 1.8; }
+    .subtitle strong { color: var(--pink); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+    .card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(8, 22, 39, 0.9);
+      color: var(--text);
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(159, 227, 255, 0.7);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.34);
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #102238;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 13px;
+      border-top: 1px solid rgba(155, 224, 255, 0.14);
+    }
+    .card-caption { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .card-id { color: var(--muted); font: 11px/1.4 "Cascadia Code", Consolas, monospace; }
+    .placeholder, .empty {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      color: var(--muted);
+      padding: 36px 20px;
+      text-align: center;
+    }
+    footer { color: var(--muted); font-size: 12px; text-align: center; padding-top: 26px; line-height: 1.8; }
+    @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .topbar { align-items: flex-start; } }
+    @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } .boot { display: none; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar">
+      <a class="brand" href="https://github.com/Kyuubi-Nyan">
+        <img src="https://github.com/Kyuubi-Nyan.png?size=96" alt="Kyuubi-Nyan" />
+        <span>Kyuubi-Nyan / Gallery</span>
+      </a>
+      <div class="nav">
+        <a href="../guestbook/">Guestbook</a>
+        <a href="https://github.com/Kyuubi-Nyan">GitHub</a>
+        <a href="https://x.com/cloneko_oo">Artist</a>
+      </div>
+    </nav>
+    <header class="hero">
+      <p class="eyebrow">ILLUSTRATION ARCHIVE / CLONEKO</p>
+      <h1>cloneko 插画图库</h1>
+      <p class="subtitle">精选 <strong>24 张 SFW 作品</strong>，用于个人主页收藏与展示。点击任意图片可前往原帖与原作者页面。</p>
+    </header>
+    <section id="grid" class="grid" aria-live="polite">
+      <div class="placeholder">正在加载图库…</div>
+    </section>
+    <footer>
+      Artwork by <a href="https://x.com/cloneko_oo">cloneko (zelmeledf2)</a> · 版权归原作者所有<br />
+      Local thumbnails generated from public post metadata.
+    </footer>
+  </main>
+  <script>
+    const grid = document.getElementById('grid');
+    fetch('./data.json', { cache: 'no-store' })
+      .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+      .then(items => {
+        grid.replaceChildren();
+        if (!items.length) throw new Error('empty gallery');
+        for (const item of items) {
+          const card = document.createElement('a');
+          card.className = 'card';
+          card.href = item.post_url;
+          card.target = '_blank';
+          card.rel = 'noopener noreferrer';
+          const image = document.createElement('img');
+          image.src = item.image;
+          image.alt = item.caption;
+          image.loading = 'lazy';
+          const meta = document.createElement('div');
+          meta.className = 'card-meta';
+          const caption = document.createElement('span');
+          caption.className = 'card-caption';
+          caption.textContent = item.caption;
+          const id = document.createElement('span');
+          id.className = 'card-id';
+          id.textContent = `#${item.id}`;
+          meta.append(caption, id);
+          card.append(image, meta);
+          grid.appendChild(card);
+        }
+      })
+      .catch(() => {
+        grid.replaceChildren();
+        const message = document.createElement('div');
+        message.className = 'empty';
+        message.textContent = '图库正在下载图片，请稍后刷新。';
+        grid.appendChild(message);
+      });
+  </script>
+</body>
+</html>

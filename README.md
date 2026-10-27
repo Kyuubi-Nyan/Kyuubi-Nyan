@@ -62,6 +62,17 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
     <img src="https://chat.getloli.com/room/@Kyuubi-Nyan.github/svg?width=600&height=160&limit=20&theme=light&title=Kyuubi-Nyan%40github:%20~&fontSize=13" alt="Kyuubi-Nyan 的实时留言板预览" />
   </a>
 </p>
+## Gallery
+
+<p align="center">
+  <a href="https://kyuubi-nyan.github.io/Kyuubi-Nyan/gallery/">
+    <img src="https://img.shields.io/badge/CLONEKO-ILLUSTRATION_GALLERY-17233A?style=for-the-badge&logo=artstation&logoColor=FF9ACB" alt="打开 cloneko 插画图库" />
+  </a>
+</p>
+
+<p align="center">
+  24 张精选 SFW 作品 · 点击图片查看原帖与作者
+</p>
 ## GitHub 小档案
 
 <table align="center">
@@ -121,6 +132,7 @@ Sometimes I write practical tools; sometimes I spend more time on the UI than th
 <p align="center">
   <sub>视觉与动态组件均为网上开源资源，出处与许可见 <a href="./CREDITS.md">CREDITS.md</a>。保留热爱，偶尔摸鱼。</sub>
 </p>
+
 
 
 

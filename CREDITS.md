@@ -23,4 +23,10 @@
 - 图片版权归原作者所有，保留原始水印，仅用于个人主页留言板背景。
 
 第三方服务可能出现临时限流或加载延迟；失效时，页面仍保留可读的标题与替代文本。
+## 图库
+
+- 页面：[cloneko illustration gallery](https://kyuubi-nyan.github.io/Kyuubi-Nyan/gallery/)
+- 作者：[cloneko (zelmeledf2)](https://x.com/cloneko_oo)
+- 内容：24 张经过安全向筛选的作品缩略图，原图与作者信息链接到公开作品页。
+- 版权归原作者所有，仅用于个人主页收藏与展示。
 
