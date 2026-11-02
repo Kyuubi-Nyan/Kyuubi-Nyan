@@ -22,12 +22,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&height=78&section=header&color=gradient&customColorList=4,11,24&reversal=false" alt="蓝白波浪装饰" width="100%" />
 </p>
 
-## Hi, I'm 18.
 
-> The road may be long, but I'll get there.
-
-I build things with **Rust and automation**, and I have a soft spot for anything anime-related.  
-Sometimes I write practical tools; sometimes I spend more time on the UI than the feature itself. Nyan.
 
 ## Tech Stack
 
